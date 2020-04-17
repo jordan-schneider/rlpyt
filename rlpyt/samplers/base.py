@@ -52,8 +52,9 @@ class BaseSampler:
         raise NotImplementedError
 
     def obtain_samples(self, itr):
+        # type: (int) -> Samples
         """Execute agent-environment interactions and return data batch."""
-        raise NotImplementedError  # type: Samples
+        raise NotImplementedError 
 
     def evaluate_agent(self, itr):
         """Run offline agent evaluation, if applicable."""
