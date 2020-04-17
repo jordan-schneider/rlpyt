@@ -1,0 +1,7 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": false
+    },
+    "editor.formatOnSave": false,
+    "python.pythonPath": "/home/joschnei/anaconda3/envs/rlpyt/bin/python",
+}

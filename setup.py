@@ -1,4 +1,13 @@
 import setuptools
+import os
+
+def find_stubs(package):
+    stubs = []
+    for root, dirs, files in os.walk(package):
+        for file in files:
+            path = os.path.join(root, file).replace(package + os.sep, '', 1)
+            stubs.append(path)
+    return {package: stubs}
 
 INSTALL_REQUIRES = [
     'numpy',
@@ -21,5 +30,6 @@ setuptools.setup(
     extras_require={
         'test': TEST_REQUIRES + INSTALL_REQUIRES,
     },
+    package_data=find_stubs('rlpyt-stubs'),
 
 )
