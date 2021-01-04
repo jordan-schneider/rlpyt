@@ -8,4 +8,5 @@ rm -rf rlpyt-stubs/*
 stubgen -o rlpyt-stubs -p rlpyt
 mv rlpyt-stubs/rlpyt/* rlpyt-stubs
 git add rlpyt-stubs
+git commit -m "Updates stubs"
 git cherry-pick -Xtheirs 47682338eed8c6b94c75bb19f10244788506d3b2
