@@ -1,0 +1,3 @@
+from typing import Any, Optional
+
+def add_weight_decay(model: Any, weight_decay: float = ..., filter_ndim_1: bool = ..., skip_list: Optional[Any] = ...): ...

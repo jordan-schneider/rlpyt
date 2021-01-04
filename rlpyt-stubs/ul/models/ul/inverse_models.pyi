@@ -1,0 +1,9 @@
+import torch
+from rlpyt.ul.models.mlp import MlpModel as MlpModel
+from rlpyt.utils.tensor import infer_leading_dims as infer_leading_dims
+from typing import Any
+
+class InverseModel(torch.nn.Module):
+    mlp: Any = ...
+    def __init__(self, input_size: Any, hidden_sizes: Any, action_size: Any, num_actions: Any, subtract: bool = ..., use_input: str = ...) -> None: ...
+    def forward(self, conv_obs: Any, conv_last: Any): ...
