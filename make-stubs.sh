@@ -1,4 +1,9 @@
 #!/bin/bash
+
+# TODO(joschnei): This creates a few git commits even if there are no stub changes. Create a temp
+# branch to try all of this, and then merge the tmp into the actual, which should noop if there
+# aren't any changes.
+
 git fetch upstream
 git rebase -Xours --no-keep-empty --empty=drop upstream/master
 git pull
