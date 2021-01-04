@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -rf rlpyt-stubs/*
 git fetch upstream
 git rebase -Xours --no-keep-empty --empty=drop upstream/master
 git pull
